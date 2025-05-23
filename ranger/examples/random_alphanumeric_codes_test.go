@@ -18,7 +18,7 @@ func Generate() string { return string(Slice(Take(8, Repeatedly(randRune)))) }
 func randRune() rune   { return RandNth(alphaNumeric) }
 
 var alphaNumeric = Concat(
-	Range('a', 'z'),
-	Range('A', 'Z'),
-	Range('0', '9'),
+	Range('a', 'z'+1),
+	Range('A', 'Z'+1),
+	Range('0', '9'+1),
 )
