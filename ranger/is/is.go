@@ -32,7 +32,7 @@ func Nil[T any](t T) bool {
 	}
 }
 func Empty[V any](s iter.Seq[V]) bool {
-	for _ = range s {
+	for range s {
 		return false
 	}
 	return true
